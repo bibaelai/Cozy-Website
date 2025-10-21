@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>Eyes Of Nature </h1>
+<p> <br>How can I forget ? <br><br>
+
+How can I forget those eyes ? <br><br>
+In the chaos of thousands of them, mine only caught hers. I remember them so well, the ones I couldn’t blink while looking at. Soft light brown, the ones that have a loud shine in the dark, that turns sunlight into warmth.
+She has those eyes that whispers “slow down” in a room full of rush. And why rushing when those eyes are inviting me to a whole new world ? A world of nature, old books and music, a world where peace breathes softly. <br>
+They reminded me of coffee; brown, warm, deep. but now coffee reminds me of them, or perhaps, of her.
+She clearly doesn’t realize the power she has, on me at least. I admit ! <br>
+And whenever I dare to look away, my gaze clings to her hair.. That brown hair finishing the fantasy her eyes had begun. Every curl tells a story as if they were alive, every movement takes my breath. I watched them falling, spiraling, dancing softly in the air. As if they were showing their gratitude to be a part of her. NADA, her name was…
+I forever thought that NADA means nothing (in Spanish) but after what I’ve seen and from now on, N-A-D-A means a lot… a lot more than my pen could write.
+<br><br>
+ <h4> August 25 2025 <h4>
+</p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>

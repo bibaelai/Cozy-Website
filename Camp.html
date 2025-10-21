@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>camp</h1>
+<p>It’s the last day of this camp week. and my heart feels heavier than my backpack. I came here expecting structure, i have set my goal to come take classes, collect the biggest amount of informations and leave.
+
+But people here changed that.
+
+Somewhere between shared meals and stargazing, between caring whispers and soft songs hummed in the dark, I began to feel something I hadn’t in a long time. a feeling that i can’t quite name but will never forget. It is so quiet and warm, something that creeps in slowly, like soft light at dawn. I listened to someone’s voice: low, tender, almost like a lullaby, and I felt something unravel inside me. Walls I didn’t know I had, slowly melting. I watched someone laugh with their whole body, and it made me laugh, too, even when I didn’t know why. I looked around and saw people I barely knew showing me the kind of kindness that felt almost unreal.   
+
+They didn’t ask who I had been before this. They just loved what I showed them here. And that kind of acceptance felt adorable.
+
+I remember walking into our room that first night—ten beds, ten girls, ten strangers. I thought I’d never feel comfortable, never get used to the noise, the closeness. But instead, it became my favorite kind of chaos. Sleepy giggles, half-asleep conversations, a night of soft rain, laughter and hugs mixing with the drops of love and pride . I found comfort in their voices, in the small gestures, someone saving me a seat, bringing me a meal, someone brushing my shoulder just to say, “I’m here.”
+
+It reminded me of life… that something out there is alive, just as comforting as my solo time, maybe even better !
+
+And in those moments under the stars, when someone started singing softly, and others whispered dreams into the night air, I fell in love with people all over again. Not with anyone in particular, but with *humanity*. With the quiet, gentle kind of love that doesn’t need to be spoken aloud to be understood. These girls made me believe that even strangers can love you, see you, hold space for you.
+
+And I realized: maybe I do love people. Maybe I always have.
+
+Now, I don’t want to go back to silence. I want more of this : the sleepy smiles, the whispered goodnights. I want more voices in the dark, more laughter from people who make me feel like *belonging* isn’t something I have to earn.
+
+ I want to stay in this bubble we built: a soft, glowing world made of kindness, of shared songs and stolen moments that feel like poetry.
+
+Thank you for letting me in. For showing me that even fleeting connections can feel like home.
+
+Thank you for reminding me how beautiful people can be.
+
+Thank you for being you.
+<br>
+A feeling I can’t quite name, but I know I’ll never forget <br>
+<br> 
+<h4>May 10 2025</h4></p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>

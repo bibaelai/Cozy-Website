@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>Lost</h1>
+<p>I find myself walking through days that feel like hollow spaces, where nothing carries the weight it used to. The things that once filled me with warmth and hope now feel like distant memories, faded and unreachable. It’s as if I’ve been rejected by my own emotions, locked out from even the simplest comforts. Not a single song can hold me anymore, not a single word can reach me. There’s no one who sees me for what I am, no one who understands what this emptiness feels like. The nights are the only time that feel remotely mine, sips of coffee, staring at the stars like they might offer some answer, but even then, I’m pretending. Pretending there’s peace when inside, there’s only chaos.<br>
+
+I’m in a wasteland, dragging on endlessly, leaving me lost in nothingness. Everything I used to love feels like it belongs to someone else now; passion, joy, hope. All of it slipping through my fingers like sand. I don’t even know if I want to hold on anymore. It’s like I’m not really living but just moving through life, envying the stillness of objects that don’t feel the way I do. Every face I see feels twisted, unrecognizable, and I hate everything that surrounds me. It’s as if the world is moving without me, and I’m stuck, desperately wanting to escape, even from the silence that once gave me peace. Now, even that silence feels suffocating, like the walls are closing in, and all I want is to break free from this heavy, endless phase that keeps dragging me deeper. <br><br>
+
+<h4>19 aug 2023</h4></p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>

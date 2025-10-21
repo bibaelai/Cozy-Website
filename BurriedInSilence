@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>Pouring Thoughts</h1>
+<p>Loneliness is not the absence of people, it’s the presence of silence in a room full of voices, being seen but not heard.<br> I’ve known solidarity for years, embraced it even, knowing full well the risk of loneliness. And yet, I still walked into it willingly. I came to this city in search of growth, knowledge and a lot more. I want to know the real meaning of life and I admit that I enjoy the life’s hardships in this experience cause I know that I’ll end up learning a lot. In this place, I found people I cannot bring myself to love. Their words are shallow, their kindness fleeting, their loyalty as fragile as glass. Still, I tried. I let myself believe that connection was possible, that somewhere in the sea of unfamiliar faces, I had found one that was comforting. It was her, the one that I trusted, defended and loved. The only one that I felt myself with.
+I woke up to them whispering my name, I gently opened my eyes with a smile that took over my face. Speechless I got…
+I found out that it was a nightmare or that’s what I like to call it to escape the painful truth. the whispers weren’t directed at me, I could hear my name come of the lips of the person I thought was there for me but in a table full of faces I couldn’t recognize, their faces were distorted. I could clearly hear what they said and for a moment I thought my ears were ill. I could hear my secrets, my weaknesses with a mixture of rumors slipping out of their tongue. the whispers aren’t whispers anymore, it was getting louder and louder, the last thing I heard is a harsh pop in both of my ears followed by a feeling of a warm liquid coming out of them. I stayed quiet for a very long time. The realization settled deep in my chest like a sickness. How easily they had smiled at me while sharpening their words behind my back. How effortlessly they had taken my trust, my loyalty, and used them against me. I keep asking myself if betraying me was actually as easy as breathing pure air? Every time my eyes catches a mirror I can see my ears getting longer, just like that animal. I’m not going to denny that I avoid looking at my face. I know but can’t accept the truth that that person is the same that I defended and fought for whenever others try to warn me about them. But now, I only fight against myself.. Against the disappointment that clings to me like a second skin. Against the guilt of believing in something that was never real. Against the restless nights, where the weight of regret presses into my chest, making sleep impossible.
+Four nights have passed, and the silence has grown louder. I ask myself again and again ; was I blind, or just desperate for connection? Was I wrong to trust, or was it simply my fate to learn this lesson the hard way?
+I don’t know what hurts more, the betrayal itself or the fact that, despite everything, a part of me still longs for the person I thought they were. Maybe that is the cruelest part of all not the lies they told, but the ones I told myself. 
+
+3 feb 2025</p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>

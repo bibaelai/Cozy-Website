@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>Interview</h1>
+<p><h2>Interview with a wife and daughter of a man or the hero who died in the last earthquake occurred in Morocco.</h2>
+<br>
+<b>Brother’s experience:</b> When I heard that Taroudant was one of the most affected areas, I immediately thought of my brother because I knew exactly where he was staying for work. I kept calling him over and over, but he didn’t answer. I had a bad feeling. I couldn’t sit still, so I contacted the company he worked for. His coworkers had already reported his death.
+
+They told me he tried to open the door when the earthquake hit so he and the others could get out, especially the female teachers who lived upstairs. But the wall next to the door collapsed on him and by the time they rescue him he was already gone.
+
+That’s how I knew.
+
+<h4>1. Can you tell us about your husband and what he meant to you?</h4>
+
+<b>Wife:</b> He was everything. My support, my safety, he was all my life. He had this quiet strength… you know the type? The kind of man who speaks more with his actions than his words. He loves deeply, without making a show of it. The way he used to look at our daughter, the way he worked so hard to give us the best life even if it meant being far from us for days at a time. He was just the best example for the good and capable man!
+<br>
+<h4>2. Where was he that night? Why wasn’t he home with you?</h4>
+
+<b>Wife:</b> He was in Taroudant, in one of its rural areas. Working. He worked in a road building company, and sometimes that meant he had to stay far from home for days or weeks at a time. It wasn’t easy, especially for Lilly. But he always called. Always. Every night, even if he was tired.
+
+That night, he was staying in a small apartment with four of his coworkers to sleep and get ready for the next day, the industry gave them that specific apartment because it was the closest to were they need to be working at.
+<br>
+<h4>3. Have you tried reaching him ?</h4>
+
+<b>Wife:</b> Yes. I tried so many times. As soon as the earthquake hit ended, i grabbed my phone and called him. It rang once… Twice… And then nonstop with multiple text messages. At first, I was panicking but after a while I just sat on the floor and stared at the screen, waiting for his name to appear. It never did. People were calling me, checking on us but I felt bad whenever they asked about my husband, all of them get quiet when they know that I haven’t heard from him yet as if they know. But still I chose to have hope.
+
+I told myself maybe his phone got lost, or broken, or he was helping others and would call me once he had a moment. I had to believe that, not just for me but for our daughter. But inside, I knew. Mothers and wives, we know!
+<br>
+<h4>4. What was that night like for you?</h4>
+
+<b>Lilly:</b> Of course no one has slept that night. We were scared! Not just of the earthquake but of the unknown. Everyone was saying Taroudant was the worst hit, and I knew that’s where my dad was. I didn’t want to panic, so I kept asking my mom if he’d called yet. She told me maybe his phone died, or maybe he was helping people. I believed her, or I tried to…. I was lying next to my grandma, staring at the ceiling in the dark, praying.
+<br>
+<h4>5. Tell us about the moment you got the call.</h4>
+
+<b>Wife:</b>It was just after 6 a.m. His brother was calling. I stared at the screen like it was on fire. I knew what it meant. I answered, and all I heard was him crying. That was it.“God bless him” he said. I dropped the phone and screamed . I didn’t plan to, it just came out like my soul was trying to hold on to God while everything else collapsed and deep inside me I was having a strange urge to follow him, I didn’t wanna be here alone. I just can’t. But I have remembered why were we living in the first place. Lilly.. and then it gets me, from now on I will be me and him at the same time.
+<br>
+<b>Lilly:</b> I was in the next room. My heart dropped when I heard mom’s phone ringing and for a moment , I thought it was my dad. I thought I’d hear his masculine voice again, telling us not to worry, like he always did.
+
+But then I heard my mom screaming *Allaho Akbar*, *La ilaha illa Allah*, and I just… froze. My heart broke before I even asked what happened. I knew.
+<br><br>
+<span style="color: red;">NOTES: </span> This interview is based on real events experienced by people I personally know and so some names have been changed to respect their privacy. I also apologize for exceeding the word limit. However, I found it difficult to shorten their stories without losing their depth and meaning.
+<br><br><h4>April 27 2024</h4></p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>Solitude</h1>
+<p>I wanted to try solitude since forever. I thought it will be out of problems, maybe it is a problem?. I’m not a lonely person, in fact I’m so social, I had a lot of friends and I’ve never thought of the way to make friends, I just had them everywhere I go. Making friends was the easiest task for me (then). They always like my personality and how am I so social and friendly with any kind  of people. What if I stopped being the way I am ? Will they suddenly unlike me ? <br>
+I stopped caring, all I was focusing on is how to be selfish in my time and so to have it all to myself. For sure, most of them noticed and just like every human being normal thinking, they thought I was mentally sick and they tried to understand and cheer me up by focusing on me more, supporting my every step and offering me more affection. My turn has come to clear things up. I’ve always been curious about what solitude feels like, I wasn’t sure if people are really suffering from it because every time I hear the word “Solitude” the word “Peace” appears in my mind unlike the people around me. I knew it will be a strange and powerful feeling. Because being lonely is a one straight way to absolute independence, I was aware of that. 
+<br>
+
+Friends weren’t something extraordinary in my world, having a huge friend group is a waste of time in my perspective, it’s like you’re tied together with iron chains, between each one of you a meter and a half off those chains. Every time someone tries to move forward others hinder him (friends), you will be forced to be like them and bear responsibility for their stupid problems. It’s like a prison to me and it’s almost impossible to find a friend that will take a similar path to yours and move at the same rhythm as you do.Either you slow them down or they do, the homogeneity will stay so rare to find.
+So, loosing friends was easier than I thought, but loosing that last loved one is rougher than I thought. It is obvious that relationships have terrible ends but I’ve never knew about friendship heartbreaks.
+I’ve never felt that way before, it is indescribable, it’s more likely of a huge rock placed above your heart, it’s slowly loosing your mind.
+<br>
+
+(With all due respect and appreciate to atheists) God created us in a perfect picture,  the way he created our body and immune system and created in parallel our spirit and it’s psychological defense mechanisms and so when something bad happens that threaten our mental health, our subconscious mind begin to defend the soul by denying the harmful idea in order for u to be safe from loosing it all.
+<br>
+That exactly what I believe happened with me when I lost her. I started being crazy delusional about that lost friendship, covering the truth with less harmful lies but as soon as I realized that it’s not a joke and I’ve lost them for real I stated to taste the bitterness of true loneliness but at the same time something inside me was satisfied. I knew then that I finally have the opportunity to live and experience pure loneliness.
+<br>
+I held a lot of questions about solitude... <br>
+ <h4>9 April 2024 </4> <br> 
+ (to be continued) </p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>

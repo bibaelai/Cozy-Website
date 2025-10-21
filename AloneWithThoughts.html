@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>Alone With Thoughts</h1>
+<p>On a random Sunday the weather is nice, the house is calm and clean, my room smells like (OUD) and I can hear the pure sound of the birds singing outdoors, I can also see the sunbeams smoothly entering from the top of the house distributing light and warmth to every room. My hot cup of coffee is in between my hands and I’m sitting on top of my cozy fresh bed with my laptop on top of my thighs and my cat sleeping near my feet. Realising the blessing I’m in while contemplating these present details but I can tell that something is wrong. Something is hindering me from enjoying my peaceful moment but I can’t really tell what it is. I have no serious problems in my life and I am aware. I have no enemies, I don’t have any school exams the following weeks so I’m not stressed as I’m used to, I don’t pay any bills, my criminal record is so clean and I my health couldn’t get better, I do feel some sort of pain in my chest and triceps but it’s because of the 50 pushups my coach forced me to do last Friday because I lost a friendly combat with my mate. But that pain is happiness to me as I know that it’s the process of getting stronger and rougher and I’m so sure that it’s far away from the reason that makes me feel this way.
+I have all the conditions to feel so pleased but I don’t and I don’t know why. <br>
+I played some songs to help me relax and rethink about my life and orientation. <br>
+قدّيش كان في ناس<br>
+عالمفرق تنطر ناس<br>
+وتشتّي الدني ويحملوا شمسية<br>
+وأنا بإيّام الصحو ما حدا نطرني<br>
+(Kadeich kan fe nas Fairouz)<br>
+I catched myself having the globus sensation and epiphora as i look at my reflection in the black screen of my laptop. I realized that I was overthinking how bad I hate people because I haven’t met anyone responsible yet. I wish I could forget the plans I skipped just because of them. I wish I could forget the feeling of drowning in a sea of disappointment and how my trust gets fragile day by day, experience by experience. I am tired of being the one who cares, the one who believes, only to be left stranded on the shores of abandonments. My heart aches for the sincerity that eludes me, for the promises that are fleeting as whispers in the wind. How can I find solace in a world where words are hollow and commitments are disposable ? <br>
+I long for true words, for the reassurance of a promise kept, but all I find is the cold embrace of betrayal. <br>
+But all of that might reveal how proud I should be to be the person I am as the one who’s independent in nearly everything in life because of the lack of trust towards other people but also the one who’s trusted by everyone and anyone due to it’s capabilities and responsibility. And that brings me back to the starting point where I didn’t know what’s bothering me. But this time I can finally enjoy my moment because I have all the answers to my questions and even more.. I have the appreciation towards myself and soul. <br>
+Alhamdulillah <br><br>
+
+<h4>4 july 2024</h4></p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>

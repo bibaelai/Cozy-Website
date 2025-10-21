@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e6d4c1;
+  --card:#fffaf5;
+  --muted:#5a4b42;
+  --accent:#9d613b;
+  --maxw:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;color:var(--muted);background:var(--bg);display:flex;justify-content:center;padding:40px}
+.wrap{width:100%;max-width:var(--maxw)}
+
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(180deg,rgba(139,90,60,0.1),transparent);display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,0.1)}
+.logo svg{width:34px;height:34px;color:var(--accent)}
+.titles{line-height:1}
+.name{font-family:'Playfair Display',serif;color:var(--accent);font-size:22px}
+.tag{font-size:12px;color:var(--muted)}
+
+.controls{display:flex;align-items:center;gap:12px}
+button.quotes-btn{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600;transition:background .3s}
+button.quotes-btn:hover{background:var(--accent);color:#fff}
+
+.preview-toggle{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+
+main{display:flex;flex-direction:column;gap:24px}
+.intro{padding:24px;background:var(--card);border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,0.1);text-align:center}
+.intro h1{font-family:'Playfair Display',serif;color:var(--accent);margin-bottom:12px}
+.intro p{line-height:1.6}
+
+.grid,.quote-list{transition:opacity .35s ease,transform .35s ease}
+.hidden{opacity:0;pointer-events:none;transform:translateY(6px)}
+.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 14px rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.05);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease;text-align:center;user-select:none}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.15)}
+.card h3{margin:0 0 8px 0;font-family:'Playfair Display',serif;color:var(--accent)}
+.card p{margin:0;color:var(--muted);font-size:14px}
+
+.quote-list{display:flex;flex-direction:column;gap:14px}
+.quote-item{padding:14px 18px;background:var(--card);border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);font-style:normal;text-align:center;font-size:17px;font-weight:500;line-height:1.6}
+
+.preview-area{margin-top:6px;display:none}
+.preview-area.visible{display:block}
+
+.preview-frame{width:100%;height:60vh;border:none;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.12)}
+
+footer{text-align:center;margin-top:28px;font-style:italic;color:var(--accent);padding-bottom:10px}
+
+.phonograph{width:50px;height:50px;border-radius:50%;background:#000;display:grid;place-items:center;margin:12px auto;cursor:pointer;transition:transform .3s}
+.phonograph:hover{transform:scale(1.1)}
+.phonograph svg{width:24px;height:24px;fill:#fff}
+
+.spotify-player{display:none;opacity:0;transition:opacity .6s ease;margin:auto;width:300px;max-width:90%}
+.spotify-player.visible{display:block;opacity:1}
+
+@media (max-width:600px){
+ body{padding:24px}
+ header{flex-direction:column;gap:8px;align-items:stretch}
+ .controls{justify-content:space-between;width:100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand" style="gap:12px">
+      <div class="logo" aria-hidden="true">
+        <!-- Vertical Coffee Bean Logo -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="32" cy="32" rx="16" ry="28" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path d="M32 4 C40 32 32 60 32 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="titles">
+        <div class="name">Biba's Espresso Notes</div>
+        <div class="tag"><span id="typing"></span><span class="cursor"></span></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label class="preview-toggle">
+          <input id="previewCheckbox" type="checkbox" />
+          <span style="font-size:13px;color:var(--muted)">Open in preview</span>
+      </label>
+      <button id="toggleView" class="quotes-btn">Quotes</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+  <h1>Welcome to My Coffee Corner</h1>
+  <p>
+    Welcome to my 3rd website code. This website contains my personal blog,<br>
+    Starting with texts I have written and I’ll make sure to add more stuff in it to keep it alive.<br>
+    I wanted to describe myself first but if I start I’ll never finish due to the unlimited interests I have.<br>
+    But I assume you already know me since you have this link so excuse me. At least you know that I am a web developer and a writer and that is enough! <br>
+    </h5> ELHARCHAOUI HIBA</h5>
+  </p>
+  
+</div>
+    <!-- Grid & Quotes area -->
+    <div id="grid" class="grid visible" aria-live="polite"></div>
+    <div id="quotes" class="quote-list hidden" aria-live="polite"></div>
+
+    <!-- Preview area (hidden unless preview checkbox + click) -->
+    <div id="preview" class="preview-area" aria-hidden="true"></div>
+
+    <div class="phonograph" id="phonograph" title="Play Music" aria-label="Play Spotify track">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+
+    <iframe id="spotify" class="spotify-player" style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/0MmCPn5IsgXJB6F6ucb8CR?utm_source=generator"
+      width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+
+    <footer>*Brewed with calm & caffeine*</footer>
+  </main>
+</div>
+
+<script>
+/* Data */
+const POSTS=[
+ {title:'Home',link:'Home.html'},
+ {title:'Camp',link:'Camp.html'},
+ {title:'Secret',link:'Secret.html'},
+ {title:'Interview',link:'Interview.html'},
+ {title:'Missing Salt',link:'MissingSalt.html'},
+ {title:'Solitude',link:'Solitude.html'},
+ {title:'Eyes Of Nature',link:'EyesOfNature.html'},
+ {title:'Alone With Thoughts',link:'AloneWithThoughts.html'},
+ {title:'White Coffee Bean ',link:'WhiteCoffeeBean.html'},
+ {title:'Lost',link:'Lost.html'},
+];
+
+const QUOTES=[
+ 'They’re like a pen. You were so attached because without them there is no more fantasy, no more ideas no more philosophy. You realize then that it’s just a pen, if it got lost you can replace it. It’s all you. You’re those ideas snd fantasies and philosophies.',
+ 'Will i ever see u again? Yes, in annother person...',
+ 'I’m sorry i hugged you so tight you lost your breath but i was just expressing my love.',
+ 'Some feelings taste better with espresso.',
+  'The aroma of calm in every sip.',
+ 'Flirting is like throwing u an egg, you let it crack or pass it back or encubate it.',
+ 'The worst feeling we can feel as humans is regret.',
+ 'Self love always starts with hateres to others ',
+ 'Life happens, coffee helps.',
+ 'Writing helps the writer more than any reader',
+ 'you´ve suffered a lot, go heal instead of stucking around ',
+ 'The happiest of lives is a busy schedule (voltaire)'
+];
+
+/* Elements */
+const grid = document.getElementById('grid');
+const quotesBox = document.getElementById('quotes');
+const toggleBtn = document.getElementById('toggleView');
+const preview = document.getElementById('preview');
+const previewCheckbox = document.getElementById('previewCheckbox');
+
+/* Utility: clear preview */
+function clearPreview(){
+  preview.innerHTML = '';
+  preview.classList.remove('visible');
+  preview.setAttribute('aria-hidden','true');
+}
+
+/* Build grid cards */
+function buildGrid(){
+  grid.innerHTML = '';
+  POSTS.forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.tabIndex = 0;
+    el.innerHTML = `<h3>${p.title}</h3>`;
+    el.addEventListener('click', (e) => {
+      if(previewCheckbox.checked){
+        clearPreview();
+        const iframe = document.createElement('iframe');
+        iframe.className = 'preview-frame';
+        iframe.src = p.link;
+        iframe.title = `${p.title} preview`;
+        preview.appendChild(iframe);
+        preview.classList.add('visible');
+        preview.setAttribute('aria-hidden','false');
+      } else {
+        window.location.href = p.link;
+      }
+    });
+    el.addEventListener('keydown', (ev) => {
+      if(ev.key === 'Enter' || ev.key === ' '){
+        ev.preventDefault();
+        el.click();
+      }
+    });
+    grid.appendChild(el);
+  });
+}
+
+/* Build quotes */
+function buildQuotes(){
+  quotesBox.innerHTML = '';
+  QUOTES.forEach(q=>{
+    const el = document.createElement('div');
+    el.className = 'quote-item';
+    el.textContent = q;
+    quotesBox.appendChild(el);
+  });
+}
+
+/* Toggle between grid and quotes */
+let showingQuotes = false;
+function updateView(){
+  if(showingQuotes){
+    grid.classList.remove('visible'); grid.classList.add('hidden');
+    quotesBox.classList.remove('hidden'); quotesBox.classList.add('visible');
+    toggleBtn.textContent = 'Texts';
+    clearPreview();
+  } else {
+    quotesBox.classList.remove('visible'); quotesBox.classList.add('hidden');
+    grid.classList.remove('hidden'); grid.classList.add('visible');
+    toggleBtn.textContent = 'Quotes';
+    clearPreview();
+  }
+}
+
+/* Typing animation */
+const phrases=['Pouring thoughts...','Midnight drafts'];
+let idx=0,ch=0,forward=true;
+function typeTick(){
+ const txt=phrases[idx];
+ document.getElementById('typing').textContent=txt.slice(0,ch);
+ if(forward){
+   if(ch<txt.length){ch++;setTimeout(typeTick,180);}  
+   else{forward=false;setTimeout(typeTick,1400);}      
+ }else{
+   if(ch>0){ch--;setTimeout(typeTick,90);}            
+   else{forward=true;idx=(idx+1)%phrases.length;setTimeout(typeTick,600);}
+ }
+}
+typeTick();
+
+/* Spotify toggle */
+const phonograph = document.getElementById('phonograph');
+const spotify = document.getElementById('spotify');
+let spotifyVisible = false;
+phonograph.addEventListener('click', () => {
+  spotifyVisible = !spotifyVisible;
+  if(spotifyVisible) spotify.classList.add('visible');
+  else spotify.classList.remove('visible');
+});
+
+/* Initialize */
+buildGrid();
+buildQuotes();
+updateView();
+
+toggleBtn.addEventListener('click', () => {
+  showingQuotes = !showingQuotes;
+  updateView();
+});
+
+previewCheckbox.addEventListener('change', () => {
+  if(!previewCheckbox.checked) clearPreview();
+});
+</script>
+</body>
+</html>

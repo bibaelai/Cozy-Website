@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pouring Thoughts — Biba's Espresso Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;line-height:1.7;padding:40px;background:#e6d4c1;color:#5a4b42;transition:background .4s,color .4s}
+h1{font-family:'Playfair Display',serif;color:#8b5a3c;text-align:center;margin-bottom:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+button{background:transparent;border:1px solid #8b5a3c;color:#8b5a3c;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600}
+button:hover{background:#8b5a3c;color:#fff}
+.selector select{padding:6px;border-radius:6px;border:1px solid #8b5a3c;background:transparent;color:#8b5a3c;cursor:pointer}
+article{max-width:800px;margin:auto;text-align:justify}
+.fade{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div class="selector">
+    <select id="themeSelect">
+      <option value="#e6d4c1|#5a4b42">Brown</option>
+      <option value="#000|#ddd">Black</option>
+      <option value="#fff|#333">White</option>
+    </select>
+  </div>
+</div>
+
+<article class="fade">
+<h1>Home</h1>
+<p>I definitely don’t have the right to call something home either if it was a place, a thing or a person. 
+
+If you ever had a feeling of euphoria about something, felt really safe, secure and warm. It will never be your home, and all of it is temporary. 
+
+Remember when you felt a strong feeling upon that specific person. and you really thought that they’re the one. you were ready to do whatever it takes to make them happy and enjoy the moment with you. What happened at the end? They hurt you like you’ve never get hurt before. Their hug was your favourite place, it was your heaven but what would you feel if that same person was near you now? Unpleasant, right? 
+
+So, it was all fake feelings ; Yes feelings are such liars. Wow you get it congratulations !!!
+
+Let’s move on,
+
+If home is not a person (obviously), then it’s a place, right?
+
+let’s use our brains to remember again the day where an earthquake happened (8/9/2023) the day when you realized a lot of things.
+
+The deep meaning of home is a safe haven and a comfort zone, a place where we can truly just be ourselves. Well, did you felt any of that that day? The obvious answer is a solid NO. You felt uncomfortable, confused and homeless. You felt afraid of the place you though was your home not of the earthquake itself. Does that gives you a feeling of nostalgic about something? I guess it does. In both situations you were so calm, released and satisfied. But suddenly everything changed in the blink of an eye. The satisfaction became struggle, safe turned to be scaredness. And a lot more of contradictions. 
+
+Home is a soul. Your soul, it’s the thing that allows you to be yourself.
+
+If you change your place, your body, friends or even your mindset. The soul will be always there no matter what. It was with you when you were born and will be when you’ll get old. It makes your heart beat and you’re lungs to breath without paying anything. It will stuck with you even if you die.
+
+Your soul is you and your home is your soul. 
+
+You are your home. So take care of yourself and be sure to offer it what it didn’t found in places and people. 
+
+Peace. <br>
+<br>
+<h4>feb 25 2024</h4></p>
+</article>
+
+<script>
+document.getElementById('themeSelect').addEventListener('change',e=>{
+  const [bg,txt]=e.target.value.split('|');
+  document.body.style.background=bg;
+  document.body.style.color=txt;
+});
+</script>
+</body>
+</html>
